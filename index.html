@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  #view{
+    position: relative;
+    left:10px; top:120px;
+
+  }
+  #view2{
+    position: relative;
+    left:150px; top:60px;
+
+  }
+  #na{
+    position:relative;
+    top:-500px;
+  }
+  #no{
+    position:relative;
+    bottom:-100px;
+  }
+
+</style>
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.0"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
+  <div id="view"></div>
+  <div id="view2"></div>
+  <div align="center" id="na">Hypothesis: Primates with a lower number of total grooming connections have connections of a higher frequency</div>
+  <div align="center" id="no">Data: the data used is from https://networkrepository.com/mammalia-primate-association-10.php<br> It focuses on 'Primate Association Group 10' over a 3 month observation period.<br>
+  These graphs show no differentiation between giving and receiving, all grooming interaction is included and treated the same. <br>
+Frequency is recorded in the data, and reported in the graphs above, though it is not specifically defined. T   </div>
+
+  
+  <script>
+  	vegaEmbed(
+      '#view',
+      'adjmatrix.json')
+      vegaEmbed(
+      '#view2',
+      'scatter.json');
+      
+
+     
+  </script>
+
+
+</body>
